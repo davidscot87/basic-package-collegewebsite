@@ -80,16 +80,19 @@ export function ContactPage() {
   return (
     <div className="bg-[#fafaf8]">
       {/* Hero Section */}
-      <section className="relative py-32 lg:py-40 overflow-hidden">
+      <section className="relative h-[95vh] min-h-[700px] overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1920&q=80" 
-            alt="Contact"
+            src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=1920&q=75" 
+            alt="Contact Us"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0c2340]/95 via-[#0c2340]/85 to-[#0c2340]/70" />
         </div>
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="relative z-10 h-full container mx-auto px-6 flex items-center">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#c9a962]/20 border border-[#c9a962]/30 rounded-full text-[#c9a962] text-sm font-medium mb-6">
               <MessageSquare className="w-4 h-4" />

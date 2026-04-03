@@ -20,19 +20,19 @@ export function HomePage({ setCurrentPage }: HomePageProps) {
       title: "Excellence in Education",
       subtitle: "Since 1985",
       description: "Nurturing minds, building character, and shaping the leaders of tomorrow through academic rigor and holistic development.",
-      image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b38?w=1920&q=80"
+      image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1920&q=75"
     },
     {
       title: "World-Class Infrastructure",
       subtitle: "State-of-the-Art Facilities",
       description: "Modern laboratories, smart classrooms, and comprehensive libraries designed to foster innovation and discovery.",
-      image: "https://images.unsplash.com/photo-1562774053-701939374585?w=1920&q=80"
+      image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1920&q=75"
     },
     {
       title: "A Legacy of Achievement",
       subtitle: "1200+ Success Stories",
       description: "Join a distinguished community of scholars, professionals, and leaders who began their journey here.",
-      image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1920&q=80"
+      image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1920&q=75"
     }
   ];
 
@@ -180,9 +180,13 @@ export function HomePage({ setCurrentPage }: HomePageProps) {
               currentSlide === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
             }`}
           >
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${slide.image})` }}
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="absolute inset-0 w-full h-full object-cover"
+              loading={index === 0 ? 'eager' : 'lazy'}
+              fetchPriority={index === 0 ? 'high' : 'low'}
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0c2340]/95 via-[#0c2340]/75 to-[#0c2340]/50" />
           </div>
@@ -272,9 +276,11 @@ export function HomePage({ setCurrentPage }: HomePageProps) {
             <div className={`relative ${isVisible['about-preview'] ? 'animate-slide-left' : 'opacity-0'}`}>
               <div className="relative z-10">
                 <img 
-                  src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80" 
+                  src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=75" 
                   alt="Campus"
                   className="w-full h-[550px] object-cover rounded-2xl shadow-2xl"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-[#c9a962]/10 rounded-2xl -z-10" />

@@ -82,9 +82,12 @@ export function GalleryPage() {
       <section className="relative py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1920&q=80" 
-            alt="Gallery"
+            src="https://images.unsplash.com/photo-1592280771190-3e2e4d571952?auto=format&fit=crop&w=1920&q=75" 
+            alt="Campus Gallery"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0c2340]/95 via-[#0c2340]/85 to-[#0c2340]/70" />
         </div>
@@ -159,9 +162,11 @@ export function GalleryPage() {
         <div className="container mx-auto px-6">
           <div className="relative rounded-2xl overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1592280771190-3e2e4d571952?w=1920&q=80" 
+              src="https://images.unsplash.com/photo-1592280771190-3e2e4d571952?auto=format&fit=crop&w=1920&q=75" 
               alt="Virtual Tour"
               className="w-full h-[500px] object-cover"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0c2340]/90 to-[#0c2340]/50 flex items-center">
               <div className="container mx-auto px-8">

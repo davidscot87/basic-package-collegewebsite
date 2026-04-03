@@ -157,9 +157,12 @@ export function CoursesPage({ setCurrentPage }: CoursesPageProps) {
       <section className="relative py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80" 
-            alt="Academics"
+            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=75" 
+            alt="Academic Programs"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0c2340]/95 via-[#0c2340]/85 to-[#0c2340]/70" />
         </div>
